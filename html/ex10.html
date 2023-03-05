@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 9. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість від’ємних показів температури.
+    'use strict'
+   function getMinusTemp(tempDay){
+       let minNumber = -50;
+       let maxNumber = 50;
+       let minusTemperatureCounter =0;
+       for(let i=0; i<=tempDay; i++){
+           let randomTemperature = minNumber+ Math.floor(Math.random()*(maxNumber - minNumber +1))
+           if(randomTemperature.toFixed(1)>0)
+               minusTemperatureCounter++
+       }
+       return minusTemperatureCounter
+   }
+    const dayAmount = parseInt(prompt('Enter how many days you want to check','1'))
+    document.write(`There were ${getMinusTemp(dayAmount)} of days with minus temperature`)
+
+</script>
+</body>
+</html>

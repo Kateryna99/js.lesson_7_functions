@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 10. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних показів температури.
+    'use strict'
+    function getAverageTemp(tempDay){
+        let minNumber = -50;
+        let maxNumber = 50;
+        let temperatureSum =0;
+        for(let i=0; i<=tempDay; i++){
+            let randomTemperature = minNumber+ Math.floor(Math.random()*(maxNumber - minNumber +1))
+            temperatureSum+=randomTemperature
+        }
+        return temperatureSum / tempDay
+    }
+
+    const tempDay = parseInt(prompt('Enter how many days you want to check','1'));
+    document.write(`The average temperature was ${getAverageTemp(tempDay).toFixed(2)}`)
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 0. Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+    'use strict'
+    function getMonthType(monthNumber) {
+        let result
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                result = 'Winter'
+                break;
+            case 3:
+            case 4:
+            case 5:
+                result = 'Spring'
+                break;
+            case 6:
+            case 7:
+            case 8:
+                result = 'Summer'
+                break;
+            case 9:
+            case 10:
+            case 11:
+                result = 'Autumn'
+                break;
+            default:
+                result = 'You type a wrong month number'
+                break;
+        }
+        return result
+    }
+    const monthNum = parseInt(prompt('Type a month number you want to get information about. From 1 to 12'));
+    const MonthType = getMonthType(monthNum)
+
+    alert(MonthType)
+</script>
+</body>
+</html>

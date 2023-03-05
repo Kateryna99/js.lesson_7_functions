@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 6. Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+
+'use strict'
+
+    function tablePrint(columnNum, rowNum) {
+        document.write(`<table class="table">`)
+        for (let i = 0; i < rowNum; i++) {
+            document.write(`<tr>`)
+            for (let j = 0; j < columnNum; j++) {
+                document.write(`<td class="table">Hello</td>`)
+            }
+            document.write(`</tr>`)
+        }
+        document.write(`</table>`)
+    }
+
+    const columnNumber = parseInt(prompt('Type how much column you want'));
+    const rowNumber = parseInt(prompt('Type how much row you want'));
+    tablePrint( columnNumber,rowNumber);
+</script>
+</body>
+</html>

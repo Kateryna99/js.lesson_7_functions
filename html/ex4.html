@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    'use strict'
+    //Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+    //1)суму;
+    //2)добуток;
+    //3)середнє арифметичне;
+    //4)мінімальне значення.
+    function getNumberSum(num1, num2, num3, num4) {
+        return num1 + num2 + num3 + num4
+    }
+
+    function getNumberProduct(num1, num2, num3, num4) {
+        return num1 * num2 * num3 * num4
+    }
+
+    function getNumberAverage(num1, num2, num3, num4) {
+        return (num1 + num2 + num3 + num4) / 4
+    }
+
+    function getNumberMin(num1, num2, num3, num4) {
+        let min = num1
+
+        if (num2 < min) min = num2
+        if (num3 < min) min = num3
+        else min = num4
+
+        return min
+    }
+
+    const number1 = parseInt(prompt('Type first number'))
+    const number2 = parseInt(prompt('Type second number'))
+    const number3 = parseInt(prompt('Type third number'))
+    const number4 = parseInt(prompt('Type fourth number'))
+
+    document.write(`The sum of the numbers is ${getNumberSum(number1, number2, number3, number4)}.<br>The product of numbers is ${getNumberProduct(number1, number2, number3, number4)}.<br>The numbers average is ${getNumberAverage(number1, number2, number3, number4)}.<br>Minimum number is ${getNumberMin(number1, number2, number3, number4)}`)
+
+</script>
+</body>
+</html>

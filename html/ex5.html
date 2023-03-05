@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: 
+    // кількість парних, кількість додатних, кількість більших за 100.
+'use strict'
+    function evenNumber(number) {
+        return number % 2 === 0;
+    }
+
+    function positiveNumber(number) {
+        return number > 0;
+    }
+    function bigNumber(number) {
+        return number > 100;
+    }
+    function getResult(num1, num2, num3) {
+        let evenNumberCounter = 0;
+        let positiveNumberCounter = 0;
+        let NumberBiggerThan100Counter = 0;
+
+        if (evenNumber(num1))
+            evenNumberCounter++
+        if (evenNumber(num2))
+            evenNumberCounter++
+        if (evenNumber(num3))
+            evenNumberCounter++
+
+        if(positiveNumber(num1))
+            positiveNumberCounter++
+        if(positiveNumber(num2))
+            positiveNumberCounter++
+        if(positiveNumber(num3))
+            positiveNumberCounter++
+
+        if(bigNumber(num1))
+            NumberBiggerThan100Counter++
+        if(bigNumber(num2))
+            NumberBiggerThan100Counter++
+        if(bigNumber(num3))
+            NumberBiggerThan100Counter++
+    }
+
+</script>
+</body>
+</html>
